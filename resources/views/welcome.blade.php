@@ -68,12 +68,21 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
+<<<<<<< HEAD
                     @auth
                         <a href="{{ url('/home') }}">Inicio</a>
                     @else
                         <a href="{{ route('login') }}">Acceder</a>
                         <a href="{{ route('register') }}">Registrarse</a>
                     @endauth
+=======
+                    @if (Auth::check())
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                    @endif
+>>>>>>> ae6659c8cdffe274874d944daa4f4e0e30b44c06
                 </div>
             @endif
 
