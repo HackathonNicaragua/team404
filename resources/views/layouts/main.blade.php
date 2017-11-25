@@ -25,6 +25,7 @@
     @include('layouts.footer')
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap3.js"></script>
     <script src="mdb/js/mdb.js"></script>
 
 </body>
