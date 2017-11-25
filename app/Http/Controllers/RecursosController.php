@@ -36,6 +36,7 @@ class RecursosController extends Controller
 			$recurso->archivo=$file->getClientOriginalName();
 
 		}
+		
 
 		$recurso->save();
 
