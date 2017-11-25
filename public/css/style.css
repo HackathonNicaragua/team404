@@ -4,6 +4,7 @@
 
 .color-white{
     color:#fff!important;
+   
 }
 
 .input-field label {
@@ -59,4 +60,35 @@
     cursor: pointer;
     vertical-align: middle;
     margin: 10px;
+}
+.btn-gm{
+    background: #CC0000;
+}
+
+/*=========Estilos del menú===============*/
+.navbar{
+    background:#032049 !important;
+    height: 60px;
+}
+.navbar {
+    margin-bottom: 0px; 
+
+}
+.navbar-brand > img {
+    width: 125px;
+}
+
+.container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-top: -16px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #f1d432;
+    background:#2597f4;
+    height:15px;
+    border-radius:15px;
+    margin-top:16px;
+    line-height: 0px;
 }
