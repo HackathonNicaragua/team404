@@ -21,6 +21,7 @@
     <div class="wrapper">
       @include('include.header')
       @include('include.aside')
+      yield('content')
       @include('include.section')
       @include('include.footer')
 

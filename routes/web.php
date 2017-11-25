@@ -15,17 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
+
 
 Route::get('/inicio', function () {
     return view('inicio');
 });
 
-=======
 //foro
 Route::resource('/foro','ForoController');
->>>>>>> ae6659c8cdffe274874d944daa4f4e0e30b44c06
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/recursos', 'RecursosController@listar');
+Route::resource('recurso', 'RecursosController');

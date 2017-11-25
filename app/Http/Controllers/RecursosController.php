@@ -10,4 +10,8 @@ class RecursosController extends Controller
     {
     	return view ('recursos.listado');
     }
+    public function index()
+    {
+    	return view ('recursos.index');
+    }
 }
