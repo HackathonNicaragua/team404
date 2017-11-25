@@ -1,0 +1,62 @@
+.stylish-color-dark {
+    background-color: #032049 !important;
+}
+
+.color-white{
+    color:#fff!important;
+}
+
+.input-field label {
+    color: #fff;
+    position: absolute;
+    top: 0.8rem;
+    left: 1.75rem;
+    font-size: 13px;
+}
+.btn-env {
+    background: #2597f4;
+    color:#fff;
+    line-height: 23px;
+    padding: 6px 17px;
+    border: 0;
+    margin: 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    outline: 0!important;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+.enlacesfot{
+    font-size: 13px!important;
+    margin-right:10px;
+    color: #2597f4!important;
+}
+.btn-floating.btn-large {
+    width: 42.5px!important;
+    height: 42.5px!important;
+}
+
+.btn-floating.btn-large i {
+    line-height: 45.5px;
+}
+
+.btn-floating {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0;
+    background-color: #039be5;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 10px;
+}
