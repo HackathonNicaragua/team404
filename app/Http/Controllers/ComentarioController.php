@@ -17,6 +17,14 @@ class ComentarioController extends Controller
         //
     }
 
+    public function listar($id)
+    {
+
+        $comentarios = Comentarios::orderBy('id','asc')->where('foro_id',$id)->get();
+        return view('comentarios.listar')->with('comentarios',$comentarios);
+        //dd($comentarios);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

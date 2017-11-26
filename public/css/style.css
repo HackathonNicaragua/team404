@@ -13,6 +13,22 @@
     left: 1.75rem;
     font-size: 13px;
 }
+.btn-comentario{
+    background: #2597f4;
+    color:#fff;
+    line-height: 23px;
+    padding: 2px 10px;
+    border: 0;
+    margin: 5px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    outline: 0!important;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
 .btn-env {
     background: #2597f4;
     color:#fff;

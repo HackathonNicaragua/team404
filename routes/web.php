@@ -20,7 +20,7 @@ Route::resource('/foro','ForoController');
 Route::get('/listar-foro','ForoController@listarPublicaciones');
 
 Route::Resource('/comentarios','ComentarioController');
-Route::get('/listar-comentarios','ComentarioController@listarComentarios');
+Route::get('/listar-comentarios/{id}','ComentarioController@listar');
 
 Route::get('/inicio', function () {
     return view('inicio');

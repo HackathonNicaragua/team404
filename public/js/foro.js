@@ -110,38 +110,3 @@ var Eliminar = function(id){
 }
 
 //comentarios
-function foroid(id)
-  {
-    var foro_id=id;
-    //console.log(foro_id);
-
-    $("#guardarComentario").click(function(event){
-        var comentario = $("#comentario").val();
-        //console.log(comentario,foro_id);
-        var token = $("input[name=_token]").val();
-        
-          var route = "/comentarios";
-          
-         $.ajax({
-              url:route,
-              headers:{'X-CSRF-TOKEN':token},
-              type:'post',
-              datatype:'json',
-              data:{foro_id:foro_id,comentario:comentario},
-
-                success:function(data){
-                      if(data.success=='true'){
-                        //listarforo();
-                  $("#modalComentario").modal('toggle');
-                  //pintamos un mensaje
-                  $("#message-save").fadeIn();
-                  $("#message-save").show().delay(3000).fadeOut(3);
-                  
-
-                          
-                      }
-                }
-         });
-    });
-
-}
