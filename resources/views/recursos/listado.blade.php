@@ -43,7 +43,9 @@
 							<br>
 							<p id="descripcion">{{substr(strip_tags($rec->descripcion), 0,300)}}...</p>
 							<br>
+							<label for=""><b>Área: {{$rec->area}}</b></label>
 							<label for=""><b>Total visitas: {{$rec->visitas}}</b></label>
+							<br>
 							<br>
 							<a href="{{ route ('recurso.show',[$rec->id])}}">Leer mas</a>
 							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
@@ -72,7 +74,9 @@
 							<br>
 							<p id="descripcion">{{substr(strip_tags($re->descripcion), 0,300)}}...</p>
 							<br>
+							<label for=""><b>Área: {{$re->area}}</b></label>
 							<label for=""><b>Total visitas: {{$re->visitas}}</b></label>
+							<br>
 							<br>
 							<a href="{{ route ('recurso.show',[$re->id])}}">Leer mas</a>
 							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
@@ -100,6 +104,7 @@
 							<br>
 							<p id="descripcion">{{substr(strip_tags($to->descripcion), 0,300)}}...</p>
 							<br>
+							<label for=""><b>Área: {{$to->area}}</b></label>
 							<label for=""><b>Total visitas: {{$to->visitas}}</b></label>
 							<br>
 							<a href="{{ route ('recurso.show',[$to->id])}}">Leer mas</a>
@@ -115,32 +120,112 @@
 				<h6 align="center">Filtar información</h6>
 				<hr>
 				<h6 align="center" id="colo">Niveles</h6>
-				<div id="radios">
-					<div class="checkbox">
-						<label><input type="checkbox" value="">Primaria</label>
-					</div>
-					<div class="checkbox">
-						<label><input type="checkbox" value="">Secundaria</label>
-					</div>
-					<div class="checkbox">
-						<label><input type="checkbox" value="">Curso técnico</label>
-					</div>
+				<div class="checkbox">
+					<label style="font-size: 1.2em">
+						<input type="checkbox" value="Primaria" id="uno">
+						<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+						Primaria
+					</label>
 				</div>
-				<hr>
-				<h6 align="center" id="colo">Áreas</h6>
-				<div id="radios">
-					@foreach ($areas as $a)
-					<div class="checkbox">
-						<label><input type="checkbox" value="{{$a->area}}">{{$a->area}}</label>
-					</div>
-					@endforeach
+				<div class="checkbox">
+					<label style="font-size: 1.2em">
+						<input type="checkbox" value="Secundaria" id="dos">
+						<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+						Secundaria
+					</label>
 				</div>
-			</div>			
+				<div class="checkbox">
+					<label style="font-size: 1.2em">
+						<input type="checkbox" value="Cursos Tecnicos" id="tres">
+						<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+						Cursos Tecnicos
+					</label>
+				</div>
+			</div>
+			<div class="card">
+				
+				@foreach ($areas as $a)
+				<div class="checkbox">
+					<label style="font-size: 1.2em">
+						<input type="checkbox" value="{{$a->area}}">
+						<span class="cr"><i class="cr-icon fa fa-check"></i></span>
+						{{$a->area}}
+					</label>
+				</div>
+				@endforeach
+			</div>	
+			<div class="card">
+				<button class="btn btn-env btn-rounded waves-effect waves-light"> Buscar</button>
+			</div>	
 		</div>
-	</div>
-	
+		<h6 align="center" id="colo">Áreas</h6>
 
-	
+	</div>
 </div>
 
+
+
+</div>
+@push ('scripts')
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#descargar").click(function(){
+			$('#message').toggle(1000);
+		});
+	});
+	$(document).ready(function(){
+		$("#message").hide();
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#uno").click(function(){
+			var check = $('#uno').prop('checked');
+
+			if (check) {
+				$('#dos').prop('disabled', true);
+				$('#tres').prop('disabled', true);
+			}
+			else {
+				$('#dos').prop('disabled', false);
+				$('#tres').prop('disabled', false);
+			}
+			var area=$('#uno').val();
+			console.log(area);
+
+		});
+		$("#dos").click(function(){
+			var check2 = $('#dos').prop('checked');
+			
+			if (check2) {
+				$('#uno').prop('disabled', true);
+				$('#tres').prop('disabled', true);
+			}
+			else {
+				$('#uno').prop('disabled', false);
+				$('#tres').prop('disabled', false);
+			}
+			var area2=$('#dos').val();
+			console.log(area2);
+
+		});
+		$("#tres").click(function(){
+			var check3 = $('#tres').prop('checked');
+			
+			if (check3) {
+				$('#uno').prop('disabled', true);
+				$('#dos').prop('disabled', true);
+			}
+			else {
+				$('#uno').prop('disabled', false);
+				$('#dos').prop('disabled', false);
+			}
+			var area3=$('#tres').val();
+			console.log(area3);
+
+		});
+	});
+</script>
+@endpush
 @endsection
