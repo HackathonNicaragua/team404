@@ -58,10 +58,14 @@
                             </li>
                         
                         @else
+                            <li><a href="/inicio">Inicio</a></li>
+                            <li><a href="">Foro</a></li>
+                            <li><a href="">Noticias</a></li>
                             <li><a href="">Recursos</a></li>
                             <li><a href="">Cursos</a></li>
-
+                            
                             <li class="dropdown">
+                                
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -71,13 +75,14 @@
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Salir
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                    <li><a href="/perfilDoc/{{ Auth::user()->id }}" id="registro">Perfil</a></li>
                                 </ul>
                             </li>
                         @endguest
@@ -101,12 +106,12 @@
                 <!-- First slide -->
                 <div class="item active">
                     <div class="view overlay hm-blue-slight">
-                        <a><img src="img/Plataforma-02.jpg" class="img-responsive" alt="slide1">
+                        <a><img src="img/Plataforma iconos-01.jpg" class="img-responsive" alt="slide1">
                             <div class="mask waves-effect waves-light"></div>
                         </a>
                         <div class="carousel-caption hidden-xs">
                             <div class="da-slide">
-                                <h2 style="font-weight: black;">Nuestra Comunidad</h2>
+                                
                                 <h5>La más grande de educación en línea en Nicaragua.</h5>
                                 <div class="da-img"></div>
                             </div>
@@ -118,12 +123,12 @@
                 <!-- Second slide -->
                 <div class="item">
                     <div class="view overlay hm-blue-slight">
-                        <a><img src="img/Plataforma-02.jpg" class="img-responsive" alt="slide2">
+                        <a><img src="img/Plataforma iconos-01.jpg" class="img-responsive" alt="slide2">
                             <div class="mask waves-effect waves-light"></div>
                         </a>
                         <div class="carousel-caption hidden-xs">
                             <div class="da-slide">
-                                <h2>Estudia en línea</h2>
+                                
                                 <h5>Encuentra la información que necesites para tus tareas.</h5>
                                 <div class="da-img"></div>
                             </div>

@@ -42,6 +42,9 @@
                         </li>
                        
                     @else
+                        <li><a href="/inicio">Inicio</a></li>
+                        <li><a href="">Foro</a></li>
+                        <li><a href="">Noticias</a></li>
                         <li><a href="">Recursos</a></li>
                         <li><a href="">Cursos</a></li>
 
@@ -55,15 +58,17 @@
                                     <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                        Logout
+                                        Salir
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
+                                <li><a href="/perfilDoc/{{ Auth::user()->id }}" id="registro">Perfil</a></li>
                             </ul>
                         </li>
+                       
                     @endguest
                 </ul>
             </div>

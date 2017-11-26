@@ -28,12 +28,15 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
+
+
 Route::get('/cursos', 'CursosController@showAll');
 Route::get('/cursos/area/{$idArea}', 'CursosController@showByArea');
 
 Auth::routes();
 
 Route::Resource('/registroDoc', 'MaestroController');
+Route::get('/perfilDoc/{id}', 'MaestroController@perfil');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/recursos', 'RecursosController@listar');
