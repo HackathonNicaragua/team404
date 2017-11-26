@@ -48,10 +48,15 @@ class RecursosController extends Controller
 		->orderBy('recursos.id', 'DESC')
 		->where('recursos.nivel', '=', $capturar[0])
 		->get();;
+
+		$top = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels')
+		->join('areas','areas.id','=','recursos.area_id')
+		->orderBy('visitas', 'DESC')
+		->get();
 		
 
 
-		return view ('recursos.listado', ["recursos"=>$recursos,"recursos2"=>$recursos2, "areas"=>$areas, "usuario"=>$usuario]);
+		return view ('recursos.listado', ["recursos"=>$recursos,"recursos2"=>$recursos2, "areas"=>$areas, "usuario"=>$usuario, 'top'=>$top]);
 
 		
 	}
@@ -95,23 +100,23 @@ class RecursosController extends Controller
 
 			return redirect('/recurso')->with('message' , 'Modificado Correctamente');
 		}
-	public function show($id)
-	{
-		$recursos = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels')
-		->join('areas','areas.id','=','recursos.area_id')
-		->orderBy('recursos.id', 'DESC')
-		->where('recursos.id','=',$id)
-        ->first();
+		public function show($id)
+		{
+			$recursos = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels')
+			->join('areas','areas.id','=','recursos.area_id')
+			->orderBy('recursos.id', 'DESC')
+			->where('recursos.id','=',$id)
+			->first();
 
-        $variable = Recurso::find($id);
+			$variable = Recurso::find($id);
 
-        if(Cache::has($id)==false){
+			if(Cache::has($id)==false){
                 // Cache::add($id,'contador',0.30);
-            Cache::add($id,'contador',0.01);
-            $variable->visitas++;
-            $variable->save();
-        }
-        return view ('recursos.show', ['recursos'=>$recursos]);
-	}
+				Cache::add($id,'contador',0.01);
+				$variable->visitas++;
+				$variable->save();
+			}
+			return view ('recursos.show', ['recursos'=>$recursos]);
+		}
 
-}
+	}

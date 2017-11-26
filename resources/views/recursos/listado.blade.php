@@ -8,7 +8,7 @@
 				<input type="text">
 			</div>
 			<div class="col-md-3">
-				 <button class="btn btn-env btn-rounded waves-effect waves-light"> Buscar</button>
+				<button class="btn btn-env btn-rounded waves-effect waves-light"> Buscar</button>
 			</div>
 		</div>
 		<div class="col-lg-9">
@@ -37,9 +37,13 @@
 							@else
 							<img src="img/game.png" alt="" class="circle">
 							@endif
-							<span class="title" id="titulo"><b>{{$rec->titulo}}</b></span>
+							<a href="{{ route ('recurso.show',[$rec->id])}}">
+								<span class="title" id="titulo"><b>{{$rec->titulo}}</b></span>
+							</a>
 							<br>
-							<p id="descripcion">{{$rec->descripcion}}.</p>
+							<p id="descripcion">{{substr(strip_tags($rec->descripcion), 0,300)}}...</p>
+							<br>
+							<label for=""><b>Total visitas: {{$rec->visitas}}</b></label>
 							<br>
 							<a href="{{ route ('recurso.show',[$rec->id])}}">Leer mas</a>
 							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
@@ -62,53 +66,46 @@
 							@else
 							<img src="img/game.png" alt="" class="circle">
 							@endif
-							<span class="title" id="titulo"><b>{{$re->titulo}}</b></span>
+							<a href="{{ route ('recurso.show',[$re->id])}}">
+								<span class="title" id="titulo"><b>{{$re->titulo}}</b></span>
+							</a>
 							<br>
-							<p id="descripcion">{{$re->descripcion}}.</p>
+							<p id="descripcion">{{substr(strip_tags($re->descripcion), 0,300)}}...</p>
 							<br>
-							<a href="">Leer mas</a>
+							<label for=""><b>Total visitas: {{$re->visitas}}</b></label>
+							<br>
+							<a href="{{ route ('recurso.show',[$re->id])}}">Leer mas</a>
 							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
 						</li>
 						@endforeach
 					</ul>
 				</div>
 				@endif
-				
 				<div id="menu5" class="tab-pane fade">
 					<ul class="collection">
+						@foreach ($top as $to)						
 						<li class="collection-item avatar">
-							<img src="img/prueba.jpg" alt="" class="circle">
-							<span class="title">Tsdfsditle</span>
-							<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo adipisci odio recusandae iusto! Amet nostrum, ab dicta unde architecto accusantium ratione autem corporis vitae quas voluptates blanditiis omnis laborum assumenda.</p>
+							@if ($to->tipo=="Documentos")
+							<img src="img/pdf.png" alt="" class="circle">
+							@elseif ($to->tipo=="Videos")
+							<img src="img/video.png" alt="" class="circle">
+							@elseif ($to->tipo=="Imagenes")
+							<img src="img/picture.png" alt="" class="circle">
+							@else
+							<img src="img/game.png" alt="" class="circle">
+							@endif
+							<a href="{{ route ('recurso.show',[$to->id])}}">
+								<span class="title" id="titulo"><b>{{$to->titulo}}</b></span>
+							</a>
 							<br>
-							<a href="">Leer mas</a>
+							<p id="descripcion">{{substr(strip_tags($to->descripcion), 0,300)}}...</p>
+							<br>
+							<label for=""><b>Total visitas: {{$to->visitas}}</b></label>
+							<br>
+							<a href="{{ route ('recurso.show',[$to->id])}}">Leer mas</a>
 							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
 						</li>
-						<br>
-						<li class="collection-item avatar">
-							<i class="material-icons circle">folder</i>
-							<span class="title">Title</span>
-							<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo adipisci odio recusandae iusto! Amet nostrum, ab dicta unde architecto accusantium ratione autem corporis vitae quas voluptates blanditiis omnis laborum assumenda.</p>
-							<br>
-							<a href="">Leer mas</a>
-						</li>
-						<br>
-						<li class="collection-item avatar">
-							<i class="material-icons circle green">insert_chart</i>
-							<span class="title">Title</span>
-							<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo adipisci odio recusandae iusto! Amet nostrum, ab dicta unde architecto accusantium ratione autem corporis vitae quas voluptates blanditiis omnis laborum assumenda.</p>
-							<br>
-							<a href="">Leer mas</a>
-						</li>
-						<br>
-						<li class="collection-item avatar">
-							<i class="material-icons circle red">play_arrow</i>
-							<span class="title">Title</span>
-							<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo adipisci odio recusandae iusto! Amet nostrum, ab dicta unde architecto accusantium ratione autem corporis vitae quas voluptates blanditiis omnis laborum assumenda.</p>
-							<br>
-							<a href="">Leer mas</a>
-						</li>
-						<br>
+						@endforeach
 					</ul>
 				</div>
 			</div>

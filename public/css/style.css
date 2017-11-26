@@ -126,7 +126,7 @@ h6#colo {
 }
 .blue-grey.lighten-5 {
     background-color: #ffffff !important;
-=======
+}
 
 .navbar-default {
     border-color: 0px!important; 
@@ -152,5 +152,8 @@ h6#colo {
 .enlacesfoot
 {
     margin: -2px 5px;
->>>>>>> dc8cbcde2b0bb14c062b5f2ad5dc0a6c74eb5f30
+}
+p {
+    margin: 0 0 10px;
+    text-align: justify;
 }

@@ -29,6 +29,7 @@
     <script src="/bootstrap/js/bootstrap3.js"></script>
     <script src="/mdb/js/mdb.js"></script>
     <script src="/jquery-alert/jquery.alertable.js"></script>
+    @stack('scripts')
     @yield('script')
 
 
