@@ -35,6 +35,27 @@
 			</select>
 		</div>
 	</div>
+	<div class="col-lg-6 col-sm-6 col-m-6 col-xs-12">
+		<div class="form-group">
+			<label>Nivel</label>
+			<select name="nivel" class="form-control selectpicker" data-live-search="true">
+				<option value="Primaria">Primaria</option>
+				<option value="Secundaria">Secundaria</option>
+				<option value="Cursos Tecnicos">Cursos Tecnicos</option>
+				<option value="Juegos">Juegos Educativos</option>
+			</select>
+		</div>
+	</div>
+	<div class="col-lg-6 col-sm-6 col-m-6 col-xs-12">
+		<div class="form-group">
+			<label>Area</label>
+			<select name="area_id" class="form-control">
+				@foreach ($areas as $a)
+				<option value="{{$a->id}}" selected>{{$a->area}}</option>
+				@endforeach
+			</select>
+		</div>
+	</div>
 
 </body>
 </html>

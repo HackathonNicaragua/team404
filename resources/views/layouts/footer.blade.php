@@ -84,6 +84,7 @@
                         <a class="btn-floating btn-large"><i class="fa fa-facebook"> </i></a>
                      
                         <a class="btn-floating btn-large"><i class="fa fa-google-plus"> </i></a>
+                        <a class="btn-floating btn-large btn-gm"><i class="fa fa-google-plus"> </i></a>
                     </ul>
                 </div>
                 <!--/.Social buttons-->

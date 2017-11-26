@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>
+    <title>
         @yield('title')-Educarte
     </title>
 
@@ -24,7 +24,6 @@
     </div>
     @include('layouts.footer')
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
     <script src="bootstrap/js/bootstrap3.js"></script>
     <script src="mdb/js/mdb.js"></script>
 

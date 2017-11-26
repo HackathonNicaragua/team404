@@ -20,8 +20,6 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
-//foro
-Route::resource('/foro','ForoController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
