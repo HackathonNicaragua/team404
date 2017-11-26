@@ -5,15 +5,13 @@
     "license": "MIT",
     "type": "project",
     "require": {
-<<<<<<< HEAD
+
         "php": ">=5.6.4",
         "laravel/framework": "5.4.*",
-=======
-        "php": ">=7.0.0",
         "intervention/image": "^2.4",
-        "fideloper/proxy": "~3.3",
-        "laravel/framework": "5.5.*",
->>>>>>> 8a3cad4b27f50592e627809284445061efeb193c
+
+        "php": ">=5.6.4",
+        "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0"
     },

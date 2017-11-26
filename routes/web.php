@@ -12,26 +12,41 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
 
-<<<<<<< HEAD
 
-=======
 //foro
 Route::resource('/foro','ForoController');
->>>>>>> 79d1aeb63ddc50fa61b0480ed306898ffcc66cc9
+
+
+//foro
+Route::resource('/foro','ForoController');
+Route::get('/listar-foro','ForoController@listarPublicaciones');
+
+Route::Resource('/comentarios','ComentarioController');
+Route::get('/listar-comentarios','ComentarioController@listarComentarios');
+
 
 Route::get('/inicio', function () {
     return view('inicio');
 });
 
-<<<<<<< HEAD
+
+
+Route::get('/cursos', 'CursosController@showAll');
+Route::get('/cursos/area/{$idArea}', 'CursosController@showByArea');
+
+Auth::routes();
+
+Route::Resource('/registroDoc', 'MaestroController');
+Route::get('/perfilDoc/{id}', 'MaestroController@perfil');
+
 //foro
 Route::resource('/foro','ForoController');
-=======
->>>>>>> 79d1aeb63ddc50fa61b0480ed306898ffcc66cc9
+
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/recursos', 'RecursosController@listar');

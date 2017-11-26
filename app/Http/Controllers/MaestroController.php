@@ -30,6 +30,16 @@ class MaestroController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function perfil($id){
+        
+        $docente= DB::table('maestros')
+          ->where('maestros.user_id', Auth::User()->id)
+          ->select('maestros.*')
+          ->get();
+
+        return view('perfil/perfil')->with('docente',$docente);
+        
+    }
     public function create()
     {
         //
@@ -56,7 +66,7 @@ class MaestroController extends Controller
        
             $imagen= $request->file('imagen');
             $filename= time(). '.'. $imagen->getClientOriginalExtension();
-            Image::make($imagen)->resize(300,335)->save(public_path('img/User/'.$filename));
+            Image::make($imagen)->resize(300,300)->save(public_path('img/User/'.$filename));
             $usuarios->imagen=$filename;
       
             $usuarios->save();

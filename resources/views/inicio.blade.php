@@ -54,6 +54,54 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li><a href="/inicio">Inicio</a></li>
+                            <li><a href="">Foro</a></li>
+                            <li><a href="">Noticias</a></li>
+                            <li><a href="{{ route('login') }}">Acceder</a></li>
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" id="user" data-toggle="dropdown">
+                                    Registrate <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url('/register') }}" id="registro">Estudiante</a></li>
+                                    <li><a href="{{ url('/registroDoc') }}" id="registro">Docentes</a></li>
+                                </ul>
+                            </li>
+                        
+                        @else
+                            <li><a href="/inicio">Inicio</a></li>
+                            <li><a href="">Foro</a></li>
+                            <li><a href="">Noticias</a></li>
+                            <li><a href="">Recursos</a></li>
+                            <li><a href="">Cursos</a></li>
+                            
+                            <li class="dropdown">
+                                
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                            Salir
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                    <li><a href="/perfilDoc/{{ Auth::user()->id }}" id="registro">Perfil</a></li>
+                                </ul>
+                            </li>
+                        @endguest
+
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{ route('logout') }}"
@@ -66,8 +114,48 @@
                                 {{ csrf_field() }}
                             </form>
                         </li>
+
                     </ul>
                 </li>
+
+                <li data-target="#carousel1" data-slide-to="1"></li>
+                <li data-target="#carousel1" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner z-depth-2" role="listbox">
+
+                <!-- First slide -->
+                <div class="item active">
+                    <div class="view overlay hm-blue-slight">
+                        <a><img src="img/Plataforma iconos-01.jpg" class="img-responsive" alt="slide1">
+                            <div class="mask waves-effect waves-light"></div>
+                        </a>
+                        <div class="carousel-caption hidden-xs">
+                            <div class="da-slide">
+                                
+                                <h5>La más grande de educación en línea en Nicaragua.</h5>
+                                <div class="da-img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.item -->
+
+                <!-- Second slide -->
+                <div class="item">
+                    <div class="view overlay hm-blue-slight">
+                        <a><img src="img/Plataforma iconos-01.jpg" class="img-responsive" alt="slide2">
+                            <div class="mask waves-effect waves-light"></div>
+                        </a>
+                        <div class="carousel-caption hidden-xs">
+                            <div class="da-slide">
+                                
+                                <h5>Encuentra la información que necesites para tus tareas.</h5>
+                                <div class="da-img"></div>
+                            </div>
+                        </div>
+
                 @endguest
             </ul>
         </div>
@@ -115,6 +203,7 @@
                         <h2>Estudia en línea</h2>
                         <h5>Encuentra la información que necesites para tus tareas.</h5>
                         <div class="da-img"></div>
+
                     </div>
                 </div>
             </div>
@@ -199,6 +288,63 @@
                 </center>
             </div>
         </div>
+
+    
+
+    
+    @include('layouts.footer')
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/mdb/js/mdb.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var flag = false;
+            var scroll;
+            $(window).scroll(function(){
+                scroll = $(window).scrollTop();
+                if(scroll > 470){
+                    if(!flag){
+                        $('.navbar').css({"background":  "#032049"});	
+                        flag = true;
+                    }
+                }else{
+                    if(flag){
+                        $(".navbar").css({"background": "transparent"});
+                        flag = false;
+                    }  
+                }            
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            var flag = false;
+            var scroll;
+            $(window).scroll(function(){
+                scroll = $(window).scrollTop();
+                if(scroll > 470){
+                    if(!flag){
+                        $('.navbar').css({"background":  "#06446E"});
+                        $('.navbar-default').css({"padding-top":"10px"})	
+                        flag = true;
+                    }
+                }else{
+                    if(flag){
+                        $(".navbar").css({"background": "transparent"});
+                        $('.navbar-default').css({"padding-top":"15px"})	
+                        flag = false;
+                    }  
+                }            
+            });
+        });
+    </script>
+    
+    <script>
+        $('.carousel').carousel();
+    </script>
+       
+
         
     </div>
 </div>

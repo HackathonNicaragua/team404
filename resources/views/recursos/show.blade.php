@@ -3,6 +3,15 @@
 
 <div class="container">
 	<div class="row">
+
+		<div class="col-lg-6">
+			{{$recursos->titulo}}
+		</div>
+	</div>
+</div>
+
+@endsection
+
 		<div class="col-lg-12" align="center">
 			<h5>{{$recursos->titulo}}</h5>
 		</div>

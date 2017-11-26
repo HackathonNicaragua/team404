@@ -5,6 +5,30 @@
 @endsection
 
 @section('contenido')
+    <style>
+        .file { 
+        background: #c2c2c2 url(../../img/ico-file.jpg) no-repeat center center;
+        height: 150px;
+        width: 150px;
+    }
+    input[type="file"] {
+        cursor: pointer !important;
+        display: block;
+        height: 80% !important;
+        opacity: 0 !important;
+        width: 50%!important;
+    
+    }
+    
+    .img-precargada {
+        height: 150px;
+        width: 150px;
+        margin-top: -127px;
+    }
+        
+        
+        
+    </style>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

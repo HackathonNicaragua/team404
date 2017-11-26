@@ -105,8 +105,17 @@ h5{
     margin-top:16px;
     line-height: 0px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+p#descripcion {
+   font-size: 15px;
+   text-align: justify;
+   margin-top: 5px;
+}
+span#titulo.title {
+     color: #3f78ca;
+
+
 p#descripcion {
  font-size: 15px;
  text-align: justify;
@@ -120,12 +129,18 @@ div#radios {
     margin-left: 30px;
 }
 h6#colo {
-    color: #3f78ca;
+
+        color: #3f78ca;
+}
+.blue-grey.lighten-5 {
+    background-color: #ffffff !important;
+
+}
+   
 }
 .blue-grey.lighten-5 {
     background-color: #ffffff !important;
 }
-
 
 .navbar1{
     background:  #032049 !important;
@@ -155,6 +170,17 @@ h6#colo {
 .enlacesfoot
 {
     margin: -2px 5px;
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+h5{
+    font-weight: 900;
+}
+  
+.stylish-color-dark {
+    background-color: #032049 !important;
 }
 
 p {
@@ -219,28 +245,157 @@ p {
 .radio label input[type="radio"]:disabled + .cr {
     opacity: .5;
 }
+
+
+.color-white{
+    color:#fff!important;
+}
+
+.input-field label {
+    color: #fff;
+    position: absolute;
+    top: 0.8rem;
+    left: 1.75rem;
+    font-size: 13px;
+    
+}
+.btn-env {
+    background: #2597f4;
+    color:#fff;
+    line-height: 23px;
+    padding: 6px 17px;
+    border: 0;
+    margin: 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    outline: 0!important;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    transition: .2s ease-out;
+}
+.enlacesfot{
+    font-size: 13px!important;
+    margin-right:10px;
+    color: #2597f4!important;
+}
+.btn-floating.btn-large {
+    width: 42.5px!important;
+    height: 42.5px!important;
+}
+
+.btn-floating.btn-large i {
+    line-height: 45.5px;
+}
+
+.btn-floating {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0;
+    background-color: #039be5;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.btn-gm{
+    background: #CC0000;
+}
+
+.btn-link{
+    color:#039be5;
+}
+.btn-primary{
+    background:#039be5; 
+}
+
+/*=========Estilos del menú===============*/
+
+.navbar {
+    border-bottom: 0px!important; 
+
+}
+.navbar-brand > img {
+    width: 150px;
+}
+
+.container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-top: -24px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #f1d432;
+    background:#2597f4;
+    height:15px;
+    border-radius:15px;
+    margin-top:16px;
+    line-height: 0px;
+}
+
 p#descripcion {
-    margin-top: 20px;
-
-
-
-.file { 
-    background: #c2c2c2 url(../../img/ico-file.jpg) no-repeat center center;
-    height: 150px;
-    width: 150px;
+   font-size: 15px;
+   text-align: justify;
+   margin-top: 5px;
 }
-input[type="file"] {
-    cursor: pointer !important;
-    display: block;
-    height: 80% !important;
-    opacity: 0 !important;
-    width: 50%!important;
+span#titulo.title {
+     color: #3f78ca;
 
 }
+div#radios {
+    margin-left: 30px;
+}
+h6#colo {
+        color: #3f78ca;
+}
+.blue-grey.lighten-5 {
+    background-color: #ffffff !important;
 
-.img-precargada {
-    height: 150px;
-    width: 150px;
+}
+.navbar1{
+    background:  #032049 !important;
+}
+.navbar-default {
+    border-color: 0px!important; 
+}
+
+.video{
+    margin: 10px 15px;
+    width: 100%;
+}
+
+.parrafo-intro{
+    color:#616161;
+    font-size:17px;
+    text-align:center;
+    margin:25px 20px;
+    font-weight: 400;
+}
+.contedor-4{
+    margin: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.enlacesfoot
+{
+    margin: -2px 5px;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 0px!important;
+
     margin-top: -127px;
 
 }
