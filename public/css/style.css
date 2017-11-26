@@ -5,7 +5,7 @@ body{
 h5{
     font-weight: 900;
 }
-  
+
 .stylish-color-dark {
     background-color: #032049 !important;
 }
@@ -110,19 +110,19 @@ h5{
 }
 <<<<<<< HEAD
 p#descripcion {
-   font-size: 15px;
-   text-align: justify;
-   margin-top: 5px;
+ font-size: 15px;
+ text-align: justify;
+ margin-top: 5px;
 }
 span#titulo.title {
-     color: #3f78ca;
+   color: #3f78ca;
 
 }
 div#radios {
     margin-left: 30px;
 }
 h6#colo {
-        color: #3f78ca;
+    color: #3f78ca;
 }
 .blue-grey.lighten-5 {
     background-color: #ffffff !important;
@@ -156,4 +156,7 @@ h6#colo {
 p {
     margin: 0 0 10px;
     text-align: justify;
+}
+p#descripcion {
+    margin-top: 15px;
 }

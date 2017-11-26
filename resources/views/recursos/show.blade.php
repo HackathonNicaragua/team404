@@ -1,20 +1,25 @@
 @extends('layouts.main')
 @section('contenido')
-
+<br><br><br>
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12" align="center">
 			<h5>{{$recursos->titulo}}</h5>
 		</div>
-		<div class="col-lg-6">
+		<br>
+		<div class="col-lg-3">Visto: {{$recursos->visitas}} veces</div>
+		<div class="col-lg-8">
 			<p>{{$recursos->descripcion}}</p>
 		</div>
-		<div class="col-lg-6">
+		<br>
+		<div class="col-lg-3">
 			<label for="">Nivel academico:</label><p>{{$recursos->nivel}}</p>
-			<br>
+		</div>
+		<div class="col-lg-6">
 			<label for="">Area:</label>
 			<p>{{$recursos->area}}</p>
 		</div>
+		<br>
 		<div class="col-lg-8">
 			@if ($recursos->tipo=="Documentos")
 			<embed src="{{asset('archivos/recursos/'.$recursos->archivo)}}" type="application/pdf" width="100%" height="500"></embed>

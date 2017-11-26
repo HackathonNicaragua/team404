@@ -30,7 +30,7 @@ class RecursosController extends Controller
 	}
 	public function listar()
 	{
-		$recursos = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels')
+		$recursos = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels', 'recursos.id as i')
 		->join('areas','areas.id','=','recursos.area_id')->orderBy('recursos.id', 'DESC')->get();;
 		$areas=Area::select('areas.area')->orderBy('areas.area')->get();
 		$id = Auth::id();
@@ -42,14 +42,13 @@ class RecursosController extends Controller
 
 		$capturar= array_merge($usuario->toarray(), $recursos2->toarray());
 		$capturar2 = array_pluck($capturar, 'grado');
-		$recursos2 = Recurso::select
-		('recursos.*','areas.*', 'recursos.nivel as nivels')
+		$recursos2 = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels','recursos.id as idd')
 		->join('areas','areas.id','=','recursos.area_id')
 		->orderBy('recursos.id', 'DESC')
 		->where('recursos.nivel', '=', $capturar[0])
 		->get();;
 
-		$top = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels')
+		$top = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels', 'recursos.id as iddd')
 		->join('areas','areas.id','=','recursos.area_id')
 		->orderBy('visitas', 'DESC')
 		->get();
@@ -109,7 +108,6 @@ class RecursosController extends Controller
 			->first();
 
 			$variable = Recurso::find($id);
-
 			if(Cache::has($id)==false){
                 // Cache::add($id,'contador',0.30);
 				Cache::add($id,'contador',0.01);
@@ -118,5 +116,46 @@ class RecursosController extends Controller
 			}
 			return view ('recursos.show', ['recursos'=>$recursos]);
 		}
+		public function filtrar ($nivel)
+		{
+			$recursos = Recurso::select('recursos.*','areas.*', 'recursos.id as i', 'recursos.nivel as niveles')
+			->join('areas','areas.id','=','recursos.area_id')->orderBy('recursos.id', 'DESC')->where('recursos.nivel', '=', $nivel)->get();;
+			$areas=Area::select('areas.area')->orderBy('areas.area')->get();
+			$id = Auth::id();
+			$usuario = Estudiante::select('estudiantes.grado')
+			->join('users','users.id','=','estudiantes.user_id')->where('users.id', '=', $id)->get();;
+		// return $usuario;
+			$recursos2 = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels')
+			->join('areas','areas.id','=','recursos.area_id')->orderBy('recursos.id', 'DESC')->get();;
+
+			$capturar= array_merge($usuario->toarray(), $recursos2->toarray());
+			$capturar2 = array_pluck($capturar, 'grado');
+			$recursos2 = Recurso::select
+			('recursos.*','areas.*', 'recursos.nivel as nivels')
+			->join('areas','areas.id','=','recursos.area_id')
+			->orderBy('recursos.id', 'DESC')
+			->where('recursos.nivel', '=', $capturar[0])
+			->get();;
+
+			$top = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nive')
+			->join('areas','areas.id','=','recursos.area_id')
+			->orderBy('visitas', 'DESC')
+			->get();
+
+
+
+			return view ('recursos.filtro', ["recursos"=>$recursos,"recursos2"=>$recursos2, "areas"=>$areas, "usuario"=>$usuario, 'top'=>$top]);
+		}
+		public function game()
+		{
+			return view ('recursos.juego');
+
+		}
+		public function game2()
+		{
+			return view ('recursos.juego2');
+
+		}
+
 
 	}

@@ -1,7 +1,8 @@
 @extends('layouts.main')
 @section('contenido')
-<link rel="stylesheet" href="{{asset('/css/input.css')}}">
 <br>
+<link rel="stylesheet" href="{{asset('/css/input.css')}}">
+
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
@@ -14,12 +15,7 @@
 		</div>
 		<div class="col-lg-9">
 			<ul class="nav nav-tabs tabs-5">
-				<li class="active"><a data-toggle="tab" href="#home" id="agregado">Agregado recientemente</a></li>
-				@if (Auth::guest())
-				@else 
-				<li><a data-toggle="tab" href="#hom2">Recomendado</a></li>
-				@endif
-				<li><a data-toggle="tab" href="#menu5">Destacado</a></li>
+				<li class="active"><a data-toggle="tab" href="#home" id="agregado">Resultados encontrados</a></li>
 			</ul>
 		</div>
 		<div class="col-lg-3"></div>
@@ -30,13 +26,13 @@
 						@foreach ($recursos as $rec)						
 						<li class="collection-item avatar">
 							@if ($rec->tipo=="Documentos")
-							<img src="img/pdf.png" alt="" class="circle">
+							<img src="/img/pdf.png" alt="" class="circle">
 							@elseif ($rec->tipo=="Videos")
-							<img src="img/video.png" alt="" class="circle">
+							<img src="/img/video.png" alt="" class="circle">
 							@elseif ($rec->tipo=="Imagenes")
-							<img src="img/picture.png" alt="" class="circle">
+							<img src="/img/picture.png" alt="" class="circle">
 							@else
-							<img src="img/game.png" alt="" class="circle">
+							<img src="/img/game.png" alt="" class="circle">
 							@endif
 							<a href="{{ route ('recurso.show',[$rec->i])}}">
 								<span class="title" id="titulo"><b>{{$rec->titulo}}</b></span>
@@ -49,66 +45,6 @@
 							<br>
 							<br>
 							<a href="{{ route ('recurso.show',[$rec->i])}}">Leer mas</a>
-							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
-						</li>
-						@endforeach
-					</ul>
-				</div>
-				@if (Auth::guest())
-				@else 
-				<div id="hom2" class="tab-pane fade">
-					<ul class="collection">
-						@foreach ($recursos2 as $re)						
-						<li class="collection-item avatar">
-							@if ($re->tipo=="Documentos")
-							<img src="img/pdf.png" alt="" class="circle">
-							@elseif ($re->tipo=="Videos")
-							<img src="img/video.png" alt="" class="circle">
-							@elseif ($re->tipo=="Imagenes")
-							<img src="img/picture.png" alt="" class="circle">
-							@else
-							<img src="img/game.png" alt="" class="circle">
-							@endif
-							<a href="{{ route ('recurso.show',[$re->idd])}}">
-								<span class="title" id="titulo"><b>{{$re->titulo}}</b></span>
-							</a>
-							<br>
-							<p id="descripcion">{{substr(strip_tags($re->descripcion), 0,300)}}...</p>
-							<br>
-							<label for=""><b>Área: {{$re->area}}</b></label>
-							<label for=""><b>Total visitas: {{$re->visitas}}</b></label>
-							<br>
-							<br>
-							<a href="{{ route('recurso.show', $re->idd ) }}">Leer mas</a>
-							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
-						</li>
-						@endforeach
-					</ul>
-				</div>
-				@endif
-				<div id="menu5" class="tab-pane fade">
-					<ul class="collection">
-						@foreach ($top as $to)						
-						<li class="collection-item avatar">
-							@if ($to->tipo=="Documentos")
-							<img src="img/pdf.png" alt="" class="circle">
-							@elseif ($to->tipo=="Videos")
-							<img src="img/video.png" alt="" class="circle">
-							@elseif ($to->tipo=="Imagenes")
-							<img src="img/picture.png" alt="" class="circle">
-							@else
-							<img src="img/game.png" alt="" class="circle">
-							@endif
-							<a href="{{ route ('recurso.show',[$to->iddd])}}">
-								<span class="title" id="titulo"><b>{{$to->titulo}}</b></span>
-							</a>
-							<br>
-							<p id="descripcion">{{substr(strip_tags($to->descripcion), 0,300)}}...</p>
-							<br>
-							<label for=""><b>Área: {{$to->area}}</b></label>
-							<label for=""><b>Total visitas: {{$to->visitas}}</b></label>
-							<br>
-							<a href="{{ route ('recurso.show',[$to->iddd])}}">Leer mas</a>
 							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
 						</li>
 						@endforeach
@@ -142,24 +78,35 @@
 						Cursos Tecnicos
 					</label>
 				</div>
+				<div class="checkbox">
+					<label style="font-size: 1.2em">
+						<a href="/recursos">
+							<input type="checkbox" value="">
+							<span class="cr"><i class="cr-icon fa fa-check"></i></span>Todos
+						</a>
+						
+					</label>
+				</div>
 			</div>
+			<hr>
+			<h6 align="center" id="colo">Áreas</h6>
 			<div class="card">
-				<h6 align="center" id="colo">Áreas</h6>
+				
 				@foreach ($areas as $a)
 				<div class="checkbox">
 					<label style="font-size: 1.2em">
-						<input type="checkbox" value="{{$a->area}}" id="area" name="area">
+						<input type="checkbox" value="{{$a->area}}" id="area">
 						<span class="cr"><i class="cr-icon fa fa-check"></i></span>
 						{{$a->area}}
 					</label>
 				</div>
 				@endforeach
 			</div>	
-			<!-- <div class="card">
+			<div class="card">
 				<button class="btn btn-env btn-rounded waves-effect waves-light"> Buscar</button>
-			</div>	 -->
+			</div>	
 		</div>
-		
+
 
 	</div>
 </div>
@@ -233,11 +180,11 @@
 			console.log(area3);
 
 		});
-		$("#area").click(function () {	 
-			alert($('input:checkbox[name=area]:checked').val());
-			
-			});
-		 });
+		$('#area').click(function(){
+			var niveles=$('input#area').val();
+			console.log(area);
+		});
+	});
 </script>
 @endpush
 @endsection

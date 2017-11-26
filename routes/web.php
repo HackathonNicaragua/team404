@@ -35,4 +35,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/recursos', 'RecursosController@listar');
+Route::get('/filtro/{nivel}', 'RecursosController@filtrar');
 Route::resource('recurso', 'RecursosController');
+Route::get('/juego_memoria', 'RecursosController@game');
+Route::get('/juego_piano', 'RecursosController@game2');
+
