@@ -14,61 +14,6 @@
     
 </head>
 <body>
-<<<<<<< HEAD
-    @include("layouts.nav")
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a href="/" class="navbar-brand" id="logo">
-                    <img src="../img/logo/Logo blanco.png" alt="educarte" class="img-responsive"> 
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @guest
-                    <li><a href="/inicio">Inicio</a></li>
-                    <li><a href="">Foro</a></li>
-                    <li><a href="">Noticias</a></li>
-                    <li><a href="{{ route('login') }}">Acceder</a></li>
-                    <li><a href="{{ route('register') }}">Registrarse</a></li>
-                    @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                Logout
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        </li>
-                    </ul>
-=======
    
     <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -145,7 +90,6 @@
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#carousel1" data-slide-to="0" class="active">
->>>>>>> 8a3cad4b27f50592e627809284445061efeb193c
                 </li>
                 @endguest
             </ul>
@@ -233,12 +177,6 @@
             </video>
         </div>
 
-<<<<<<< HEAD
-        <center>
-            <br><br>
-            <h5 class="section-title h5-responsive">Promovemos</h5>
-        </center>
-=======
         <!--============================= /.Inicio del contenido de la web ===========================-->
         <div class="container">
             <div class="col-md-12">
@@ -250,45 +188,10 @@
 
                    <iframe width="100%" height="550" src="https://www.youtube.com/embed/nt8fIraw1yM?rel=0" frameborder="0" allowfullscreen></iframe>
                 </div>
->>>>>>> 8a3cad4b27f50592e627809284445061efeb193c
 
         <div class="col-md-4">
             <div class="contedor-4 v">
                 <center>
-<<<<<<< HEAD
-                    <div class="view hm-zoom overlay">
-                        <img src="/img/Bombilla_Mesa de trabajo 1.png" class="img-fluid " alt="">
-                        <div class="mask flex-center">
-                         
-                        </div>
-                    </div>
-
-                    <p class="parrafo-intro">Autodidácta</p> 
-                </center>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="contedor-4">
-                <center>
-                    <div class="view hm-zoom overlay">
-                        <img src="/img/Megafono_Mesa de trabajo 1.png" class="img-fluid " alt="">
-                        <div class="mask flex-center">
-                            
-                        </div>
-                    </div>
-                    <p class="parrafo-intro">Comunicación</p> 
-                </center>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="contedor-4">
-                <center>
-                    <div class="view hm-zoom overlay">
-                        <img src="/img/Planta.png" class="img-fluid " alt="">
-                        <div class="mask flex-center">
-                            
-                        </div>
-=======
                     <br><br>
                     <h5 class="section-title h5-responsive">Promovemos</h5>
                 </center>
@@ -331,44 +234,11 @@
                             </div>
                             <p class="parrafo-intro">formación Personal</p>
                         </center>
->>>>>>> 8a3cad4b27f50592e627809284445061efeb193c
                     </div>
                     <p class="parrafo-intro">formación Personal</p>
                 </center>
             </div>
         </div>
-<<<<<<< HEAD
-        
-    </div>
-</div>
-
-
-
-@include('layouts.footer')
-<script src="/js/jquery-3.2.1.min.js"></script>
-<script src="/bootstrap/js/bootstrap.js"></script>
-<script src="/mdb/js/mdb.js"></script>
-
-<script>
-    $(document).ready(function(){
-        var flag = false;
-        var scroll;
-        $(window).scroll(function(){
-            scroll = $(window).scrollTop();
-            if(scroll > 470){
-                if(!flag){
-                    $('.navbar').css({"background":  "#06446E"});
-                    $('.navbar-default').css({"padding-top":"10px"})	
-                    flag = true;
-                }
-            }else{
-                if(flag){
-                    $(".navbar").css({"background": "transparent"});
-                    $('.navbar-default').css({"padding-top":"15px"})	
-                    flag = false;
-                }  
-            }            
-=======
     
 
     
@@ -395,7 +265,6 @@
                     }  
                 }            
             });
->>>>>>> 8a3cad4b27f50592e627809284445061efeb193c
         });
     });
 </script>
