@@ -8,25 +8,25 @@
         @yield('title')-Educarte
     </title>
    
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="font/css/font-awesome.css">
-    <link rel="stylesheet" href="mdb/css/mdb.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../font/css/font-awesome.css">
+    <link rel="stylesheet" href="../../mdb/css/mdb.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 
     
 </head>
 <body>
-    @include("layouts.nav")
+   @include("layouts.nav")
     <div class="container">
         <div class="col-md-12">
             @yield('contenido')
         </div>
     </div>
     @include('layouts.footer')
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="mdb/js/mdb.js"></script>
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+    <script src="../../mdb/js/mdb.js"></script>
 
 
 </body>

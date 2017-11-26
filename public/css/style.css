@@ -82,10 +82,7 @@ h5{
 }
 
 /*=========Estilos del menú===============*/
-.navbar{
-    background:transparent!important;
-    height: 60px;
-}
+
 .navbar {
     margin-bottom: 0px; 
 
@@ -108,7 +105,9 @@ h5{
     margin-top:16px;
     line-height: 0px;
 }
-
+.navbar1{
+    background:  #032049 !important;
+}
 .navbar-default {
     border-color: 0px!important; 
 }
@@ -133,4 +132,25 @@ h5{
 .enlacesfoot
 {
     margin: -2px 5px;
+}
+
+
+.file { 
+    background: #c2c2c2 url(../../img/ico-file.jpg) no-repeat center center;
+    height: 150px;
+    width: 150px;
+}
+input[type="file"] {
+    cursor: pointer !important;
+    display: block;
+    height: 80% !important;
+    opacity: 0 !important;
+    width: 50%!important;
+
+}
+
+.img-precargada {
+    height: 150px;
+    width: 150px;
+    margin-top: -127px;
 }

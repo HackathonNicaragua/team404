@@ -20,6 +20,9 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
+
 Auth::routes();
+
+Route::Resource('/registroDoc', 'MaestroController');
 
 Route::get('/home', 'HomeController@index')->name('home');

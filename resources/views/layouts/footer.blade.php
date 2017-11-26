@@ -66,7 +66,7 @@
             <div class="col-md-8 col-lg-9">
                 <div class="col-md-4">
                 
-                    <p class="color-white">© 2017 Copyright: <a href=""><strong> educarte.ni</strong></a></p>
+                    <p class="color-white">© 2017 Copyright: <a href=""><strong> educarte.edu</strong></a></p>
                     
                 </div>
                 <div class="col-md-8 pull-left">
