@@ -13,22 +13,15 @@
                 </a>
 
     @endif
-    	<a  data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-		  ver comentarios
-		</a>
-		
-		<div class="collapse" id="collapseExample">
-		  <div class="well">
-		    ...
-		  </div>
+    	<input type="button" id="btn-2" value="ocultar">
+		<div id="contenido2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quisquam quod fugit adipisci, itaque, ab consequuntur praesentium cupiditate temporibus eius laboriosam saepe nobis nostrum sapiente expedita, atque aperiam repellendus incidunt.
 		</div>
+		
     	<i class="fa fa-clock-o" style="margin-left: 5px;">{{date('g:i a ', strtotime($f->created_at))}}</i>            
      	<a href="#" Onclick='foroid({{$f->id}});' data-toggle='modal' data-target='#modalComentario'>
                 <i class="fa fa-comment-o" style="margin-left: 690px"></i>              
-        </a>
-
-        
-</span>     
+        </a>    
     
     <br>
     <hr>
