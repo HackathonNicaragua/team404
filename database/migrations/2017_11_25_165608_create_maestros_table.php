@@ -19,7 +19,7 @@ class CreateMaestrosTable extends Migration
             $table->string('apellidos');
             $table->string('telefono');
             $table->string('instituto');
-            $table->string('foto');
+            $table->integer('docenteid');
             $table->integer('user_id');
             $table->timestamps();
         });

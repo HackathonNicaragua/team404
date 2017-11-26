@@ -1,5 +1,5 @@
    
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar1 navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -12,7 +12,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a href="/" class="navbar-brand" id="logo">
+                <a href="/inicio" class="navbar-brand" id="logo">
                     <img src="../img/logo/Logo blanco.png" alt="educarte" class="img-responsive"> 
                 </a>
             </div>
@@ -31,7 +31,16 @@
                         <li><a href="">Foro</a></li>
                         <li><a href="">Noticias</a></li>
                         <li><a href="{{ route('login') }}">Acceder</a></li>
-                        <li><a href="{{ route('register') }}">Registrarse</a></li>
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" id="user" data-toggle="dropdown">
+                                Registrate <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ url('/register') }}" id="registro">Estudiante</a></li>
+                                <li><a href="{{ url('/registroDoc') }}" id="registro">Docentes</a></li>
+                            </ul>
+                        </li>
+                       
                     @else
                         <li><a href="">Recursos</a></li>
                         <li><a href="">Cursos</a></li>

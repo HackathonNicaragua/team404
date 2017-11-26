@@ -1,15 +1,19 @@
 @extends('layouts.main')
 
+@section('title')
+    Registro Estudiantes
+@endsection
+
 @section('contenido')
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <br>
+            <br><br><br>
             <div class="panel panel-default">
                 <br><br>
                 <center>
                     <img src="img/logo/Isologo.png">
-                    <h3>Registro de usuario</h3>
+                    <h5 class="section-title h5-responsive">Registro de Estudiantes</h5>
                      <p style="color:#039be5;">Por favor ingrese sus datos</p>
                 </center>
 
