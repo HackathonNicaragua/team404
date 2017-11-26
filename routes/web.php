@@ -20,6 +20,9 @@ Route::get('/inicio', function () {
     return view('inicio');
 });
 
+Route::get('/cursos', 'CursosController@showAll');
+Route::get('/cursos/area/{$idArea}', 'CursosController@showByArea');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
