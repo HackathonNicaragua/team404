@@ -9,7 +9,7 @@
 
             <!--First column-->
             <div class="col-md-12">
-                <img src="img/logo/Logo blanco.png" alt="" width="150px">
+                <img src="/img/logo/Logo blanco.png" alt="" width="150px">
             </div>
             <!--/.First column-->
             <div class="col-md-10 col-md-offset-1">
@@ -85,6 +85,7 @@
                     <ul>
                         <a class="btn-floating btn-large"><i class="fa fa-facebook"> </i></a>
                      
+                        <a class="btn-floating btn-large"><i class="fa fa-google-plus"> </i></a>
                         <a class="btn-floating btn-large btn-gm"><i class="fa fa-google-plus"> </i></a>
                     </ul>
                 </div>
