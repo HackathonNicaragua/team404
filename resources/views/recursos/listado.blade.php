@@ -41,7 +41,7 @@
 							<br>
 							<p id="descripcion">{{$rec->descripcion}}.</p>
 							<br>
-							<a href="">Leer mas</a>
+							<a href="{{ route ('recurso.show',[$rec->id])}}">Leer mas</a>
 							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
 						</li>
 						@endforeach

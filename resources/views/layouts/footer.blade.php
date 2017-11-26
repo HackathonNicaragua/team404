@@ -9,7 +9,7 @@
 
             <!--First column-->
             <div class="col-md-12">
-                <img src="img/logo/Logo blanco.png" alt="" width="150px">
+                <img src="/img/logo/Logo blanco.png" alt="" width="150px">
             </div>
             <!--/.First column-->
             <div class="col-md-10 col-md-offset-1">

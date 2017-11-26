@@ -12,6 +12,7 @@ use App\Estudiante;
 use Session;
 use DB;
 use Auth;
+use Cache;
 
 use Carbon\Carbon;
 
@@ -99,7 +100,7 @@ class RecursosController extends Controller
 		$recursos = Recurso::select('recursos.*','areas.*', 'recursos.nivel as nivels')
 		->join('areas','areas.id','=','recursos.area_id')
 		->orderBy('recursos.id', 'DESC')
-		->where('n.id','=',$id)
+		->where('recursos.id','=',$id)
         ->first();
 
         $variable = Recurso::find($id);
