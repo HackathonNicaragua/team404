@@ -11,36 +11,7 @@
     <link rel="stylesheet" href="mdb/css/mdb.css">
     <link rel="stylesheet" href="css/style.css"> 
 
-    <style>
-        .navbar{
-            background:#032049 !important;
-            height: 60px;
-        }
-        .navbar {
-            margin-bottom: 0px; 
-
-        }
-        .navbar-brand > img {
-            width: 125px;
-        }
-
-        .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-            margin-top: -16px;
-        }
-        .navbar-default .navbar-nav > li > a {
-            color: #fff;
-        }
-        .navbar-default .navbar-nav>li>a:hover {
-            color: #f1d432;
-            background:#2597f4;
-            height:15px;
-            border-radius:15px;
-            margin-top:16px;
-            line-height: 0px;
-        }
-
-
-    </style>
+ 
 </head>
 <body>
     @include("layouts.nav")
@@ -119,7 +90,7 @@
                 <!-- First slide -->
                 <div class="item active">
                     <div class="view overlay hm-blue-slight">
-                        <a><img src="img/Background.jpg" class="img-responsive" alt="slide1">
+                        <a><img src="img/Plataforma-02.jpg" class="img-responsive" alt="slide1">
                             <div class="mask waves-effect waves-light"></div>
                         </a>
                         <div class="carousel-caption hidden-xs">
@@ -136,7 +107,7 @@
                 <!-- Second slide -->
                 <div class="item">
                     <div class="view overlay hm-blue-slight">
-                        <a><img src="img/Background.jpg" class="img-responsive" alt="slide2">
+                        <a><img src="img/Plataforma-02.jpg" class="img-responsive" alt="slide2">
                             <div class="mask waves-effect waves-light"></div>
                         </a>
                         <div class="carousel-caption hidden-xs">
@@ -178,7 +149,7 @@
                         de un sin número de herramientas que ayudarán a la formación académica de los estudiantes que hacen uso de la misma.
                     </p>
 
-                    <video src="/videos/" controls autoplay loop muted preload="auto" poster="" class="video" >
+                    <video src="" controls autoplay loop muted preload="auto" poster="" class="video" >
                         HTML5 Video is required for this example
                     </video>
                 </div>
@@ -238,6 +209,29 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="mdb/js/mdb.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var flag = false;
+            var scroll;
+            $(window).scroll(function(){
+                scroll = $(window).scrollTop();
+                if(scroll > 470){
+                    if(!flag){
+                        $('.navbar').css({"background":  "#06446E"});
+                        $('.navbar-default').css({"padding-top":"10px"})	
+                        flag = true;
+                    }
+                }else{
+                    if(flag){
+                        $(".navbar").css({"background": "transparent"});
+                        $('.navbar-default').css({"padding-top":"15px"})	
+                        flag = false;
+                    }  
+                }            
+            });
+        });
+    </script>
     <script>
         $('.carousel').carousel();
     </script>

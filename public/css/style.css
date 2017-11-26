@@ -2,7 +2,9 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-
+h5{
+    font-weight: 900;
+}
   
 .stylish-color-dark {
     background-color: #032049 !important;
@@ -81,7 +83,7 @@ body{
 
 /*=========Estilos del menú===============*/
 .navbar{
-    background:#032049 !important;
+    background:transparent!important;
     height: 60px;
 }
 .navbar {
@@ -89,11 +91,11 @@ body{
 
 }
 .navbar-brand > img {
-    width: 125px;
+    width: 150px;
 }
 
 .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin-top: -16px;
+    margin-top: -24px;
 }
 .navbar-default .navbar-nav > li > a {
     color: #fff;
@@ -105,6 +107,10 @@ body{
     border-radius:15px;
     margin-top:16px;
     line-height: 0px;
+}
+
+.navbar-default {
+    border-color: 0px!important; 
 }
 
 .video{
