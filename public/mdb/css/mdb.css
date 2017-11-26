@@ -7347,7 +7347,7 @@ textarea.materialize-textarea {
   outline: none;
   height: 3rem;
   width: 100%;
-  font-size: 1rem;
+  font-size: 14px;
   margin: 0 0 15px 0;
   padding: 0;
   box-shadow: none;
@@ -7574,7 +7574,7 @@ button:focus {
   position: absolute;
   top: 0.8rem;
   left: 0.75rem;
-  font-size: 1rem;
+  font-size: 14px;
   cursor: text;
   -webkit-transition: 0.2s ease-out;
   -moz-transition: 0.2s ease-out;
@@ -7584,7 +7584,7 @@ button:focus {
 }
 
 .input-field label.active {
-  font-size: 0.8rem;
+  font-size: 13px;
   -webkit-transform: translateY(-140%);
   -moz-transform: translateY(-140%);
   -ms-transform: translateY(-140%);
