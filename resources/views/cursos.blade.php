@@ -85,8 +85,19 @@
                                         <h4 class="modal-title">{{$curso->titulo}}</h4>
                                         <p>{{$curso->descripcion}}</p>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <div class="modal-footer row">
+                                        <div class="rating col-md-4 color-blue-dark">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <ul class="list-inline item-details col-md-8 color-blue-dark">
+                                            <li>2h<i class="fa fa-clock-o"></i></li>
+                                            <li>312<i class="fa fa-user-o"></i></li>
+                                            <li><label style="font-size: large;" class="color-green-vibrant">Gratis</label></li>
+                                        </ul>
                                     </div>
                                 </div>
 
