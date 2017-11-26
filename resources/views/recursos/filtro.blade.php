@@ -13,7 +13,7 @@
 		</div>
 		<div class="col-lg-9">
 			<ul class="nav nav-tabs tabs-5">
-				<li class="active"><a data-toggle="tab" href="#home" id="agregado">Agregado recientemente</a></li>
+				<li class="active"><a data-toggle="tab" href="#home" id="agregado">Resultados encontrados</a></li>
 				@if (Auth::guest())
 				@else 
 				<li><a data-toggle="tab" href="#hom2">Recomendado</a></li>
@@ -48,66 +48,6 @@
 							<br>
 							<br>
 							<a href="{{ route ('recurso.show',[$rec->id])}}">Leer mas</a>
-							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
-						</li>
-						@endforeach
-					</ul>
-				</div>
-				@if (Auth::guest())
-				@else 
-				<div id="hom2" class="tab-pane fade">
-					<ul class="collection">
-						@foreach ($recursos2 as $re)						
-						<li class="collection-item avatar">
-							@if ($re->tipo=="Documentos")
-							<img src="/img/pdf.png" alt="" class="circle">
-							@elseif ($re->tipo=="Videos")
-							<img src="/img/video.png" alt="" class="circle">
-							@elseif ($re->tipo=="Imagenes")
-							<img src="/img/picture.png" alt="" class="circle">
-							@else
-							<img src="/img/game.png" alt="" class="circle">
-							@endif
-							<a href="{{ route ('recurso.show',[$re->id])}}">
-								<span class="title" id="titulo"><b>{{$re->titulo}}</b></span>
-							</a>
-							<br>
-							<p id="descripcion">{{substr(strip_tags($re->descripcion), 0,300)}}...</p>
-							<br>
-							<label for=""><b>Área: {{$re->area}}</b></label>
-							<label for=""><b>Total visitas: {{$re->visitas}}</b></label>
-							<br>
-							<br>
-							<a href="{{ route ('recurso.show',[$re->id])}}">Leer mas</a>
-							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
-						</li>
-						@endforeach
-					</ul>
-				</div>
-				@endif
-				<div id="menu5" class="tab-pane fade">
-					<ul class="collection">
-						@foreach ($top as $to)						
-						<li class="collection-item avatar">
-							@if ($to->tipo=="Documentos")
-							<img src="img/pdf.png" alt="" class="circle">
-							@elseif ($to->tipo=="Videos")
-							<img src="img/video.png" alt="" class="circle">
-							@elseif ($to->tipo=="Imagenes")
-							<img src="img/picture.png" alt="" class="circle">
-							@else
-							<img src="img/game.png" alt="" class="circle">
-							@endif
-							<a href="{{ route ('recurso.show',[$to->id])}}">
-								<span class="title" id="titulo"><b>{{$to->titulo}}</b></span>
-							</a>
-							<br>
-							<p id="descripcion">{{substr(strip_tags($to->descripcion), 0,300)}}...</p>
-							<br>
-							<label for=""><b>Área: {{$to->area}}</b></label>
-							<label for=""><b>Total visitas: {{$to->visitas}}</b></label>
-							<br>
-							<a href="{{ route ('recurso.show',[$to->id])}}">Leer mas</a>
 							<!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
 						</li>
 						@endforeach
@@ -194,8 +134,6 @@
 				$('#tres').prop('disabled', false);
 			}
 			var area=$('#uno').val();
-			var ruta='/fechas/'+ auxiliar3;
-			window.location.href=ruta;
 			console.log(area);
 
 		});
