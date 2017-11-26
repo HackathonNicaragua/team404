@@ -1,4 +1,5 @@
-    <nav class="navbar navbar-default navbar-static-top">
+   
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -11,8 +12,8 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a href="/" class="navbar-brand" id="logo">
+                    <img src="../img/logo/Logo blanco.png" alt="educarte" class="img-responsive"> 
                 </a>
             </div>
 
@@ -26,9 +27,15 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @guest
+                        <li><a href="/inicio">Inicio</a></li>
+                        <li><a href="">Foro</a></li>
+                        <li><a href="">Noticias</a></li>
                         <li><a href="{{ route('login') }}">Acceder</a></li>
                         <li><a href="{{ route('register') }}">Registrarse</a></li>
                     @else
+                        <li><a href="">Recursos</a></li>
+                        <li><a href="">Cursos</a></li>
+
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 {{ Auth::user()->name }} <span class="caret"></span>

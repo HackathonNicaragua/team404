@@ -19,6 +19,8 @@ class CreateRecursosTable extends Migration
             $table->string('descripcion');
             $table->string('archivo');
             $table->string('tipo');
+            $table->string('nivel');
+            $table->string('area_id');
             $table->timestamps();
         });
     }
