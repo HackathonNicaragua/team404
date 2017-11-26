@@ -162,12 +162,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-<<<<<<< HEAD
-         Collective\Html\HtmlServiceProvider::class,
-=======
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
->>>>>>> 8a3cad4b27f50592e627809284445061efeb193c
 
         /*
          * Package Service Providers...
