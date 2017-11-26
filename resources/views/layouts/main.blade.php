@@ -7,10 +7,11 @@
     <title>
         @yield('title')-Educarte
     </title>
-
+   
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="font/css/font-awesome.css">
     <link rel="stylesheet" href="mdb/css/mdb.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     

@@ -124,7 +124,7 @@
                         </a>
                         <div class="carousel-caption hidden-xs">
                             <div class="da-slide">
-                                <h2>Nuestra Comunidad</h2>
+                                <h2 style="font-weight: black;">Nuestra Comunidad</h2>
                                 <h5>La más grande de educación en línea en Nicaragua.</h5>
                                 <div class="da-img"></div>
                             </div>
@@ -169,7 +169,69 @@
         <!-- /.carousel -->
         <!--============================= /.Fin carousel ===========================-->
 
+        <!--============================= /.Inicio del contenido de la web ===========================-->
+        <div class="container">
+            <div class="col-md-12">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="parrafo-intro">
+                        Plataforma educativa con el objetivo de unir a la comunidad estudiantil nicaraguense, a través
+                        de un sin número de herramientas que ayudarán a la formación académica de los estudiantes que hacen uso de la misma.
+                    </p>
 
+                    <video src="/videos/" controls autoplay loop muted preload="auto" poster="" class="video" >
+                        HTML5 Video is required for this example
+                    </video>
+                </div>
+
+                <center>
+                    <br><br>
+                    <h5 class="section-title h5-responsive">Promovemos</h5>
+                </center>
+
+                <div class="col-md-4">
+                    <div class="contedor-4 v">
+                        <center>
+                            <div class="view hm-zoom overlay">
+                                <img src="/img/Bombilla_Mesa de trabajo 1.png" class="img-fluid " alt="">
+                                <div class="mask flex-center">
+                                   
+                                </div>
+                            </div>
+
+                            <p class="parrafo-intro">Autodidácta</p> 
+                        </center>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contedor-4">
+                        <center>
+                            <div class="view hm-zoom overlay">
+                                <img src="/img/Megafono_Mesa de trabajo 1.png" class="img-fluid " alt="">
+                                <div class="mask flex-center">
+                                    
+                                </div>
+                            </div>
+                            <p class="parrafo-intro">Comunicación</p> 
+                        </center>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contedor-4">
+                        <center>
+                            <div class="view hm-zoom overlay">
+                                <img src="/img/Planta.png" class="img-fluid " alt="">
+                                <div class="mask flex-center">
+                                    
+                                </div>
+                            </div>
+                            <p class="parrafo-intro">formación Personal</p>
+                        </center>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    
 
     
     @include('layouts.footer')

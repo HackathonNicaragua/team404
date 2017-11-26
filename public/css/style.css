@@ -1,3 +1,9 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+  
 .stylish-color-dark {
     background-color: #032049 !important;
 }
@@ -13,6 +19,7 @@
     top: 0.8rem;
     left: 1.75rem;
     font-size: 13px;
+    
 }
 .btn-env {
     background: #2597f4;
@@ -98,4 +105,26 @@
     border-radius:15px;
     margin-top:16px;
     line-height: 0px;
+}
+
+.video{
+    margin: 10px 15px;
+    width: 100%;
+}
+
+.parrafo-intro{
+    color:#616161;
+    font-size:17px;
+    text-align:center;
+    margin:25px 20px;
+    font-weight: 400;
+}
+.contedor-4{
+    margin: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.enlacesfoot
+{
+    margin: -2px 5px;
 }
