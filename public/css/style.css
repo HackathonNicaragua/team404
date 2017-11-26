@@ -65,6 +65,13 @@
     background: #CC0000;
 }
 
+.btn-link{
+    color:#039be5;
+}
+.btn-primary{
+    background:#039be5; 
+}
+
 /*=========Estilos del menú===============*/
 .navbar{
     background:#032049 !important;
