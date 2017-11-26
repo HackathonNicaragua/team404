@@ -8,7 +8,6 @@
 	</div>
 	<div class="col-md-8" style="border:1px solid lightgrey">
   				<div>
-				  
 				  	<ul class="nav nav-tabs" role="tablist">
 					    <li role="presentation" class="active">
 					    	<a href="#home" aria-controls="home" role="tab" data-toggle="tab">Destacado</a>
