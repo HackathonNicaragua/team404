@@ -235,7 +235,6 @@
 		});
 		$("#area").click(function () {	 
 			alert($('input:checkbox[name=area]:checked').val());
-			
 			});
 		 });
 </script>
