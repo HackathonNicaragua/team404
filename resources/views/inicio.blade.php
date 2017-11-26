@@ -177,6 +177,29 @@
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="mdb/js/mdb.js"></script>
     <script>
+        $(document).ready(function(){
+            var flag = false;
+            var scroll;
+            $(window).scroll(function(){
+                scroll = $(window).scrollTop();
+                if(scroll > 470){
+                    if(!flag){
+                        $('.navbar').css({"background":  "#06446E"});
+                        $('.navbar-default').css({"padding-top":"10px"})	
+                        flag = true;
+                    }
+                }else{
+                    if(flag){
+                        $(".navbar").css({"background": "transparent"});
+                        $('.navbar-default').css({"padding-top":"15px"})	
+                        flag = false;
+                    }  
+                }            
+            });
+        });
+    </script>
+    
+    <script>
         $('.carousel').carousel();
     </script>
        
