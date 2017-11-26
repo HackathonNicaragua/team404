@@ -16,6 +16,14 @@ Route::get('/', function () {
 });
 
 
+//foro
+Route::resource('/foro','ForoController');
+Route::get('/listar-foro','ForoController@listarPublicaciones');
+
+Route::Resource('/comentarios','ComentarioController');
+Route::get('/listar-comentarios','ComentarioController@listarComentarios');
+
+
 Route::get('/inicio', function () {
     return view('inicio');
 });
@@ -23,3 +31,5 @@ Route::get('/inicio', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/recursos', 'RecursosController@listar');
+Route::resource('recurso', 'RecursosController');

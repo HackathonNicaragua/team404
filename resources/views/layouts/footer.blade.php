@@ -9,26 +9,26 @@
 
             <!--First column-->
             <div class="col-md-12">
-                <img src="img/logo/Logo blanco.png" alt="">
+                <img src="/img/logo/Logo blanco.png" alt="" width="150px">
             </div>
             <!--/.First column-->
             <div class="col-md-10 col-md-offset-1">
                 <div class="col-md-7">
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         
-                        <p><a href="#!">Quiénes somos</a></p>
-                        <p><a href="#!">Preguntas Frecuentes</a></p>
-                        <p><a href="#!">Contácto</a></p>
-                        <p><a href="#!">Soporte Técnico</a></p>
+                        <p  class="enlacesfoot"><a href="#!">Quiénes somos</a></p>
+                        <p  class="enlacesfoot"><a href="#!">Preguntas Frecuentes</a></p>
+                        <p  class="enlacesfoot"><a href="#!">Contácto</a></p>
+                        <p  class="enlacesfoot"><a href="#!">Soporte Técnico</a></p>
                     </div>
                     <!--/.Second column-->
 
                     <!--Third column-->
-                    <div class="col-md-6">
-                        <p><a href="#!">Certificaciones</a></p>
-                        <p><a href="#!">Seguridad</a></p>
-                        <p><a href="#!">Nuestros socios</a></p>
-                        <p><a href="#!">Guia para padres</a></p>
+                    <div class="col-md-5">
+                        <p class="enlacesfoot"><a href="#!">Certificaciones</a></p>
+                        <p class="enlacesfoot"><a href="#!">Seguridad</a></p>
+                        <p class="enlacesfoot"><a href="#!">Nuestros socios</a></p>
+                        <p class="enlacesfoot"><a href="#!">Guia para padres</a></p>
                     </div>
                 
                 </div>
@@ -64,10 +64,12 @@
         <div class="row">
             <!--Grid column-->
             <div class="col-md-8 col-lg-9">
-                <div class="col-md-6">
-                    <p class="color-white">© 2017 Copyright: <a href=""><strong> Educarte.ni</strong></a></p>
+                <div class="col-md-4">
+                
+                    <p class="color-white">© 2017 Copyright: <a href=""><strong> educarte.ni</strong></a></p>
+                    
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8 pull-left">
                     <a href="" class="enlacesfot">Condiciones de uso</a> 
                     <a href="" class="enlacesfot">Politicas de privacidad</a>
                 </div>
@@ -83,6 +85,7 @@
                     <ul>
                         <a class="btn-floating btn-large"><i class="fa fa-facebook"> </i></a>
                      
+                        <a class="btn-floating btn-large"><i class="fa fa-google-plus"> </i></a>
                         <a class="btn-floating btn-large btn-gm"><i class="fa fa-google-plus"> </i></a>
                     </ul>
                 </div>

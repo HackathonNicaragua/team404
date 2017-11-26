@@ -6,41 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inicio</title>
 
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="font/css/font-awesome.css">
-    <link rel="stylesheet" href="mdb/css/mdb.css">
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/font/css/font-awesome.css">
+    <link rel="stylesheet" href="/mdb/css/mdb.css">
+    <link rel="stylesheet" href="/css/style.css"> 
 
-    <style>
-        .navbar{
-            background:#032049 !important;
-            height: 60px;
-        }
-        .navbar {
-            margin-bottom: 0px; 
-
-        }
-        .navbar-brand > img {
-            width: 125px;
-        }
-
-        .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-            margin-top: -16px;
-        }
-        .navbar-default .navbar-nav > li > a {
-            color: #fff;
-        }
-        .navbar-default .navbar-nav>li>a:hover {
-            color: #f1d432;
-            background:#2597f4;
-            height:15px;
-            border-radius:15px;
-            margin-top:16px;
-            line-height: 0px;
-        }
-
-
-    </style>
+ 
 </head>
 <body>
     @include("layouts.nav")
@@ -119,12 +90,12 @@
                 <!-- First slide -->
                 <div class="item active">
                     <div class="view overlay hm-blue-slight">
-                        <a><img src="img/Background.jpg" class="img-responsive" alt="slide1">
+                        <a><img src="img/Plataforma-02.jpg" class="img-responsive" alt="slide1">
                             <div class="mask waves-effect waves-light"></div>
                         </a>
                         <div class="carousel-caption hidden-xs">
                             <div class="da-slide">
-                                <h2>Nuestra Comunidad</h2>
+                                <h2 style="font-weight: black;">Nuestra Comunidad</h2>
                                 <h5>La más grande de educación en línea en Nicaragua.</h5>
                                 <div class="da-img"></div>
                             </div>
@@ -136,7 +107,7 @@
                 <!-- Second slide -->
                 <div class="item">
                     <div class="view overlay hm-blue-slight">
-                        <a><img src="img/Background.jpg" class="img-responsive" alt="slide2">
+                        <a><img src="img/Plataforma-02.jpg" class="img-responsive" alt="slide2">
                             <div class="mask waves-effect waves-light"></div>
                         </a>
                         <div class="carousel-caption hidden-xs">
@@ -169,13 +140,98 @@
         <!-- /.carousel -->
         <!--============================= /.Fin carousel ===========================-->
 
+        <!--============================= /.Inicio del contenido de la web ===========================-->
+        <div class="container">
+            <div class="col-md-12">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="parrafo-intro">
+                        Plataforma educativa con el objetivo de unir a la comunidad estudiantil nicaraguense, a través
+                        de un sin número de herramientas que ayudarán a la formación académica de los estudiantes que hacen uso de la misma.
+                    </p>
 
+                    <video src="" controls autoplay loop muted preload="auto" poster="" class="video" >
+                        HTML5 Video is required for this example
+                    </video>
+                </div>
+
+                <center>
+                    <br><br>
+                    <h5 class="section-title h5-responsive">Promovemos</h5>
+                </center>
+
+                <div class="col-md-4">
+                    <div class="contedor-4 v">
+                        <center>
+                            <div class="view hm-zoom overlay">
+                                <img src="/img/Bombilla_Mesa de trabajo 1.png" class="img-fluid " alt="">
+                                <div class="mask flex-center">
+                                   
+                                </div>
+                            </div>
+
+                            <p class="parrafo-intro">Autodidácta</p> 
+                        </center>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contedor-4">
+                        <center>
+                            <div class="view hm-zoom overlay">
+                                <img src="/img/Megafono_Mesa de trabajo 1.png" class="img-fluid " alt="">
+                                <div class="mask flex-center">
+                                    
+                                </div>
+                            </div>
+                            <p class="parrafo-intro">Comunicación</p> 
+                        </center>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contedor-4">
+                        <center>
+                            <div class="view hm-zoom overlay">
+                                <img src="/img/Planta.png" class="img-fluid " alt="">
+                                <div class="mask flex-center">
+                                    
+                                </div>
+                            </div>
+                            <p class="parrafo-intro">formación Personal</p>
+                        </center>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    
 
     
     @include('layouts.footer')
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="mdb/js/mdb.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/mdb/js/mdb.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var flag = false;
+            var scroll;
+            $(window).scroll(function(){
+                scroll = $(window).scrollTop();
+                if(scroll > 470){
+                    if(!flag){
+                        $('.navbar').css({"background":  "#06446E"});
+                        $('.navbar-default').css({"padding-top":"10px"})	
+                        flag = true;
+                    }
+                }else{
+                    if(flag){
+                        $(".navbar").css({"background": "transparent"});
+                        $('.navbar-default').css({"padding-top":"15px"})	
+                        flag = false;
+                    }  
+                }            
+            });
+        });
+    </script>
     <script>
         $(document).ready(function(){
             var flag = false;

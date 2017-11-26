@@ -1,10 +1,17 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h5{
+    font-weight: 900;
+}
+  
 .stylish-color-dark {
     background-color: #032049 !important;
 }
 
 .color-white{
     color:#fff!important;
-   
 }
 
 .input-field label {
@@ -13,6 +20,7 @@
     top: 0.8rem;
     left: 1.75rem;
     font-size: 13px;
+    
 }
 .btn-env {
     background: #2597f4;
@@ -61,6 +69,7 @@
     vertical-align: middle;
     margin: 10px;
 }
+
 .btn-gm{
     background: #CC0000;
 }
@@ -74,7 +83,7 @@
 
 /*=========Estilos del menú===============*/
 .navbar{
-    background:#032049 !important;
+    background:transparent!important;
     height: 60px;
 }
 .navbar {
@@ -82,11 +91,11 @@
 
 }
 .navbar-brand > img {
-    width: 125px;
+    width: 150px;
 }
 
 .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin-top: -16px;
+    margin-top: -24px;
 }
 .navbar-default .navbar-nav > li > a {
     color: #fff;
@@ -98,4 +107,50 @@
     border-radius:15px;
     margin-top:16px;
     line-height: 0px;
+}
+<<<<<<< HEAD
+p#descripcion {
+   font-size: 15px;
+   text-align: justify;
+   margin-top: 5px;
+}
+span#titulo.title {
+     color: #3f78ca;
+
+}
+div#radios {
+    margin-left: 30px;
+}
+h6#colo {
+        color: #3f78ca;
+}
+.blue-grey.lighten-5 {
+    background-color: #ffffff !important;
+=======
+
+.navbar-default {
+    border-color: 0px!important; 
+}
+
+.video{
+    margin: 10px 15px;
+    width: 100%;
+}
+
+.parrafo-intro{
+    color:#616161;
+    font-size:17px;
+    text-align:center;
+    margin:25px 20px;
+    font-weight: 400;
+}
+.contedor-4{
+    margin: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.enlacesfoot
+{
+    margin: -2px 5px;
+>>>>>>> dc8cbcde2b0bb14c062b5f2ad5dc0a6c74eb5f30
 }
