@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
+=======
+//foro
+Route::resource('/foro','ForoController');
+Route::get('/listar-foro','ForoController@listarPublicaciones');
+
+Route::Resource('/comentarios','ComentarioController');
+Route::get('/listar-comentarios','ComentarioController@listarComentarios');
+>>>>>>> 415269301cff8c88934170181147afc8486677ed
 
 Route::get('/inicio', function () {
     return view('inicio');

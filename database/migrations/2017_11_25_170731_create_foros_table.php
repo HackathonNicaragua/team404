@@ -16,10 +16,8 @@ class CreateForosTable extends Migration
         Schema::create('foros', function (Blueprint $table) {
             $table->increments('id');
             $table->string('tematica');
-            $table->string('imagen');
             $table->string('pregunta');
             $table->integer('user_id');
-            $table->integer('area_id');
             $table->timestamps();
         });
     }
