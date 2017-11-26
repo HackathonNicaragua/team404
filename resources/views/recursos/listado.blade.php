@@ -30,13 +30,13 @@
 						@foreach ($recursos as $rec)						
 						<li class="collection-item avatar">
 							@if ($rec->tipo=="Documentos")
-							<img src="img/pdf.png" alt="" class="circle">
+							<img src="/img/pdf.png" alt="" class="circle">
 							@elseif ($rec->tipo=="Videos")
-							<img src="img/video.png" alt="" class="circle">
+							<img src="/img/video.png" alt="" class="circle">
 							@elseif ($rec->tipo=="Imagenes")
-							<img src="img/picture.png" alt="" class="circle">
+							<img src="/img/picture.png" alt="" class="circle">
 							@else
-							<img src="img/game.png" alt="" class="circle">
+							<img src="/img/game.png" alt="" class="circle">
 							@endif
 							<a href="{{ route ('recurso.show',[$rec->i])}}">
 								<span class="title" id="titulo"><b>{{$rec->titulo}}</b></span>
@@ -61,13 +61,13 @@
 						@foreach ($recursos2 as $re)						
 						<li class="collection-item avatar">
 							@if ($re->tipo=="Documentos")
-							<img src="img/pdf.png" alt="" class="circle">
+							<img src="/img/pdf.png" alt="" class="circle">
 							@elseif ($re->tipo=="Videos")
-							<img src="img/video.png" alt="" class="circle">
+							<img src="/img/video.png" alt="" class="circle">
 							@elseif ($re->tipo=="Imagenes")
-							<img src="img/picture.png" alt="" class="circle">
+							<img src="/img/picture.png" alt="" class="circle">
 							@else
-							<img src="img/game.png" alt="" class="circle">
+							<img src="/img/game.png" alt="" class="circle">
 							@endif
 							<a href="{{ route ('recurso.show',[$re->idd])}}">
 								<span class="title" id="titulo"><b>{{$re->titulo}}</b></span>
@@ -118,7 +118,7 @@
 		</div>
 		<div class="col-lg-3">
 			<div class="card">
-				<h6 align="center">Filtar información</h6>
+				<h6 align="center" id="colo">Filtar información</h6>
 				<hr>
 				<h6 align="center" id="colo">Niveles</h6>
 				<div class="checkbox">

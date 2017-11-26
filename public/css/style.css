@@ -105,8 +105,7 @@ h5{
     margin-top:16px;
     line-height: 0px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 p#descripcion {
  font-size: 15px;
  text-align: justify;
@@ -126,11 +125,17 @@ h6#colo {
     background-color: #ffffff !important;
 }
 
-=======
+
 .navbar1{
     background:  #032049 !important;
 }
->>>>>>> 8a3cad4b27f50592e627809284445061efeb193c
+
+
+.navbar1{
+    background:  #032049 !important;
+}
+
+
 .navbar-default {
     border-color: 0px!important; 
 }
@@ -156,16 +161,17 @@ h6#colo {
 {
     margin: -2px 5px;
 }
-<<<<<<< HEAD
+
+
+
 p {
     margin: 0 0 10px;
     text-align: justify;
 }
 p#descripcion {
     margin-top: 15px;
-=======
 
-
+}
 .file { 
     background: #c2c2c2 url(../../img/ico-file.jpg) no-repeat center center;
     height: 150px;
@@ -184,5 +190,5 @@ input[type="file"] {
     height: 150px;
     width: 150px;
     margin-top: -127px;
->>>>>>> 8a3cad4b27f50592e627809284445061efeb193c
+
 }
