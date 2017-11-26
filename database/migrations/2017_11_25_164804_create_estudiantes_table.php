@@ -21,7 +21,6 @@ class CreateEstudiantesTable extends Migration
             $table->integer('edad');
             $table->string('genero');
             $table->string('instituto');
-            $table->string('foto');
             $table->integer('user_id');
             $table->timestamps();
         });
