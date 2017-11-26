@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Foro;
-use Auth;
+use App\Comentarios;
 
-class ForoController extends Controller
+class ComentarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,17 +15,6 @@ class ForoController extends Controller
     public function index()
     {
         //
-
-        return view('foro.index');
-    }
-
-    public function listarPublicaciones()
-    {
-        $foro = Foro::orderBy('foros.id', 'DESC')
-        ->join('users', 'users.id','foros.user_id')
-        ->select('users.name','foros.pregunta','foros.tematica','foros.created_at','foros.id')->get();
-        //dd($foro);
-        return view('foro.listar')->with('foro',$foro);
     }
 
     /**
@@ -50,14 +38,14 @@ class ForoController extends Controller
         //
         if($request->ajax())
         {
-                    $foro = new Foro();
-                    $foro->user_id =  \Auth::user()->id;
-                    $foro->tematica = $request->tematica; 
-                    $foro->pregunta = $request->pregunta;
-                    $foro->save();
+                    $comentario = new Comentarios();
+                    $comentario->user_id =  \Auth::user()->id;
+                    $comentario->comentario = $request->comentario; 
+                    $comentario->foro_id = $request->foro_id;
+                    $comentario->save();
                 
                 //si no hay error entonces
-                if($foro){
+                if($comentario){
                     //Session::flash('save','Se ha creado correctamente');
                     return response()->json(['success'=>'true']);
                 }else{
@@ -65,6 +53,7 @@ class ForoController extends Controller
                 }
 
         }
+
     }
 
     /**
@@ -87,8 +76,6 @@ class ForoController extends Controller
     public function edit($id)
     {
         //
-        $foro = Foro::FindOrFail($id);
-        return response()->json($foro);
     }
 
     /**
@@ -101,17 +88,6 @@ class ForoController extends Controller
     public function update(Request $request, $id)
     {
         //
-          if($request->ajax()){
-                $foro = Foro::FindOrFail($id);
-                $input = $request->all();
-                $resultado = $foro->fill($input)->save();
-
-                if($resultado){
-                    return response()->json(['success'=>'true']);
-                }else{
-                    return response()->json(['success'=>'false']);
-                }
-        }
     }
 
     /**
@@ -123,15 +99,5 @@ class ForoController extends Controller
     public function destroy($id)
     {
         //
-          $foro = Foro::FindOrFail($id);
-                $resultado = $foro->delete();
-
-                if($resultado)
-                {
-                    return response()->json(['success'=>'true']);
-                }else
-                {
-                    return response()->json(['success'=>'false']);
-                }
     }
 }
