@@ -18,6 +18,10 @@ Route::get('/', function () {
 
 //foro
 Route::resource('/foro','ForoController');
+
+
+//foro
+Route::resource('/foro','ForoController');
 Route::get('/listar-foro','ForoController@listarPublicaciones');
 
 Route::Resource('/comentarios','ComentarioController');
@@ -37,6 +41,12 @@ Auth::routes();
 
 Route::Resource('/registroDoc', 'MaestroController');
 Route::get('/perfilDoc/{id}', 'MaestroController@perfil');
+
+//foro
+Route::resource('/foro','ForoController');
+
+Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/recursos', 'RecursosController@listar');
