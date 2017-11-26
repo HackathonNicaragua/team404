@@ -15,22 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 
+=======
 //foro
 Route::resource('/foro','ForoController');
-Route::get('/listar-foro','ForoController@listarPublicaciones');
-
-Route::Resource('/comentarios','ComentarioController');
-Route::get('/listar-comentarios','ComentarioController@listarComentarios');
-
+>>>>>>> 79d1aeb63ddc50fa61b0480ed306898ffcc66cc9
 
 Route::get('/inicio', function () {
     return view('inicio');
 });
 
-Route::get('/cursos', 'CursosController@showAll');
-Route::get('/cursos/area/{$idArea}', 'CursosController@showByArea');
-
+<<<<<<< HEAD
+//foro
+Route::resource('/foro','ForoController');
+=======
+>>>>>>> 79d1aeb63ddc50fa61b0480ed306898ffcc66cc9
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
